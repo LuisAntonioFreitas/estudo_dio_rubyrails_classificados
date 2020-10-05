@@ -3,13 +3,22 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # salvar
   def create
-    if (params[:user][:password] == params[:user][:password_confirmation])
+    # verifica campo preenchido e confirmação de senha
+    if (params[:user][:password].present? && params[:user][:password_confirmation].present?) && 
+       (params[:user][:password] == params[:user][:password_confirmation])
+
       @user = User.new(user_params)
-      @user.save
-      redirect_to "/sessions/new", notice: "Cadastro realizado com sucesso!"
+      if @user.save
+        redirect_to "/sessions/new", notice: "Cadastro realizado com sucesso!"
+      else
+        render :new
+        # redirect_to "/users/new", alert: "Cadastro não realizado!"
+      end
+
     else
-      redirect_to "/users/new", notice: "Senha de confirmação não confere!"
+      redirect_to "/users/new", alert: "Senha de confirmação não confere!"
     end
   end
 
@@ -19,7 +28,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :name, 
       :email, 
-      :password 
+      :password
     )
   end
 end

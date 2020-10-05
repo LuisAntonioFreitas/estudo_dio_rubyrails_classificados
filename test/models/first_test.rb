@@ -5,6 +5,6 @@ class FirstTest < ActiveSupport::TestCase
     variavel = "Cadu"
 
     assert_equal "Cadu", variavel # teste ok
-    assert_equal "Cadu X", variavel # teste não passa
+    # assert_equal "Cadu X", variavel # teste não passa
   end
 end

@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_10_03_234843) do
 
-  create_table "new_table", primary_key: "idnew_table", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "new_tablecol", limit: 45, null: false
-    t.string "new_tablecol1", limit: 45
-    t.index ["new_tablecol"], name: "new_tablecol_UNIQUE", unique: true
-  end
-
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
