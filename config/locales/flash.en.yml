@@ -1,0 +1,4 @@
+en:
+  users:
+    create: 
+      success: "Successful registration!"

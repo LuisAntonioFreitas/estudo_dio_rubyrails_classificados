@@ -1,0 +1,7 @@
+en:
+  mensagens:
+    mensagem_boasvindas: "Welcome, %{name}!"
+    mensagem_erro_padrao_cadastro: "Error saving!"
+    mensagem_sucesso_cadastro: "Successful registration!"
+    mensagem_erro_senha: "Password does not match!"
+    mensagem_erro_confirmacao_senha: "Confirmation password does not match!"

@@ -1,0 +1,7 @@
+pt-BR:
+  mensagens:
+    mensagem_boasvindas: "Bem vindo, %{name}!"
+    mensagem_erro_padrao_cadastro: "Erro ao salvar!"
+    mensagem_sucesso_cadastro: "Cadastro realizado com sucesso!"
+    mensagem_erro_senha: "Senha não confere!"
+    mensagem_erro_confirmacao_senha: "Senha de confirmação não confere!"

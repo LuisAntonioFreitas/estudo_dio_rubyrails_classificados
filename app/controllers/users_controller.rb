@@ -11,14 +11,14 @@ class UsersController < ApplicationController
 
       @user = User.new(user_params)
       if @user.save
-        redirect_to "/sessions/new", notice: "Cadastro realizado com sucesso!"
+        redirect_to new_session_path, notice: t("mensagens.mensagem_sucesso_cadastro") # t(".success") # flash.pt-BR.yml
       else
         render :new
         # redirect_to "/users/new", alert: "Cadastro não realizado!"
       end
 
     else
-      redirect_to "/users/new", alert: "Senha de confirmação não confere!"
+      redirect_to new_user_path, alert: t("mensagens.mensagem_erro_confirmacao_senha")
     end
   end
 

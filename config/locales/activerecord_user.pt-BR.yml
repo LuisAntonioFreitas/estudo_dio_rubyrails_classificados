@@ -1,0 +1,15 @@
+# EXEMPLO:
+# pt-BR:
+#   mensagens:
+#     mensagem1: "valor"
+
+# <%= translate("mensagens.mensagem1")
+
+pt-BR:
+  activerecord: 
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirme sua Senha"
