@@ -1,0 +1,6 @@
+en:
+  notification_mailer:
+    welcome:
+      subject: "Welcome to DIO Classificados"
+      title: "Welcome, %{name} to DIO Classificados"
+      texto: "EN: test test test test test test test test test test test test test test test test test "

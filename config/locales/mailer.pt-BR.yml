@@ -1,0 +1,6 @@
+pt-BR:
+  notification_mailer:
+    welcome:
+      subject: "Bem vindo ao DIO Classificados"
+      title: "Bem vindo, %{name} ao DIO Classificados"
+      texto: "pt-BR: teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste "

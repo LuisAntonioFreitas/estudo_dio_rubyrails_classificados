@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
       @user = User.new(user_params)
       if @user.save
+        NotificationMailer.welcome(@user.name, @user.email).deliver_later
         redirect_to new_session_path, notice: t("mensagens.mensagem_sucesso_cadastro") # t(".success") # flash.pt-BR.yml
       else
         flash[:alert] = t("mensagens.mensagem_erro_cadastro")

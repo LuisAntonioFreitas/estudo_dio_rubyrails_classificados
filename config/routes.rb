@@ -33,4 +33,8 @@ Rails.application.routes.draw do
       delete "logout", to: "sessions#destroy", as: "logout"
     end
   end
+
+  # ad
+  resources :ads, only: [:new, :create]
+
 end
