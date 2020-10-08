@@ -4,4 +4,12 @@
   Aqui vai meu conteúdo!
 
   <%= 3 + 2 %>
+
+  <%= @x %>
+  <p>
+  <%= session[:user_id] %>
+  </p>
+  <% if user_signed_in? %>
+    <%= "XXXX #{@current_user.name} XXXX" %> 
+  <% end %>
 </p>

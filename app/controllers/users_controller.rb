@@ -13,8 +13,9 @@ class UsersController < ApplicationController
       if @user.save
         redirect_to new_session_path, notice: t("mensagens.mensagem_sucesso_cadastro") # t(".success") # flash.pt-BR.yml
       else
+        flash[:alert] = t("mensagens.mensagem_erro_cadastro")
         render :new
-        # redirect_to "/users/new", alert: "Cadastro não realizado!"
+        # redirect_to "/users/new", alert: t("mensagens.mensagem_erro_cadastro")
       end
 
     else

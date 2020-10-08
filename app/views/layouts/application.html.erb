@@ -21,8 +21,12 @@
     </p>
     
     <nav>
-      <%= link_to t("menus.cadastrese"), new_user_path %>
-      <%= link_to t("menus.entrar"), new_session_path %>
+      <% if user_signed_in? %>
+        <%= button_to t("menus.sair"), logout_sessions_path, method: :delete %>
+      <% else %>
+        <%= link_to t("menus.cadastrese"), new_user_path %>
+        <%= link_to t("menus.entrar"), new_session_path %>
+      <% end if %>
     </nav>
   
     <%= yield %>

@@ -22,5 +22,15 @@ Rails.application.routes.draw do
   # get "/sessions/new", to: "sessions#new"
 
   # login
-  resources :sessions, only: [:new, :create]
+  resources :sessions, only: [:new, :create] do
+    # member do
+    #   "/sessions/:id"
+    # end
+    # collection do
+    #   "/sessions/"
+    # end
+    collection do
+      delete "logout", to: "sessions#destroy", as: "logout"
+    end
+  end
 end
