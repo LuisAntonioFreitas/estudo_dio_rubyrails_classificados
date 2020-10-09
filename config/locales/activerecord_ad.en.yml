@@ -1,0 +1,7 @@
+en:
+  activerecord: 
+    attributes:
+      ad:
+        title: "Title"
+        description: "Description"
+        price: "Price"

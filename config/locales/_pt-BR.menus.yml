@@ -1,5 +1,7 @@
 pt-BR:
   menus:
+    home: "Home"
     cadastrese: "Cadastre-se"
     entrar: "Entrar"
     sair: "Sair"
+    novo: "Novo Anúncio"

@@ -2,4 +2,5 @@ en:
   botoes:
     cadastrar: "Register"
     entrar: "Sing In"
-    novo: "New Ad"
+    novo: "Save"
+    editar: "Edit"

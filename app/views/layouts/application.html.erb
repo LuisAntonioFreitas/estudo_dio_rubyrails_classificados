@@ -18,16 +18,18 @@
       <% if flash.alert %>
         <div class="alert"><%= flash[:alert] %></div>
       <% end %>
+      <% clean_flash %>
     </p>
     
     <nav>
+      <%= link_to t("menus.home"), root_path %>
       <% if user_signed_in? %>
         <%= button_to t("menus.sair"), logout_sessions_path, method: :delete %>
         <%= link_to t("menus.novo"), new_ad_path %>
       <% else %>
         <%= link_to t("menus.cadastrese"), new_user_path %>
         <%= link_to t("menus.entrar"), new_session_path %>
-      <% end if %>
+      <% end %>
     </nav>
   
     <%= yield %>

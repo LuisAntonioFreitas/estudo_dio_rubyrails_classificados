@@ -1,4 +1,7 @@
 en:
   titulos:
+    home: "Adverts"
     cadastrese: "Sign Up"
     login: "Login"
+    novo: "New Ad"
+    editar: "Edit Ad"

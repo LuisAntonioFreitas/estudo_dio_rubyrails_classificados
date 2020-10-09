@@ -35,6 +35,6 @@ Rails.application.routes.draw do
   end
 
   # ad
-  resources :ads, only: [:new, :create]
+  resources :ads, only: [:new, :create, :edit, :update]
 
 end

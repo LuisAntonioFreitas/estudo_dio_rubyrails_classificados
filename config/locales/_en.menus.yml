@@ -1,5 +1,7 @@
 en:
   menus:
+    home: "Home"
     cadastrese: "Sign Up"
     entrar: "Sing In"
     sair: "Sing Out"
+    novo: "New Ad"

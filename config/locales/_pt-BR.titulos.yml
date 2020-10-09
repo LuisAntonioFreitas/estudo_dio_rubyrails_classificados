@@ -1,4 +1,7 @@
 pt-BR:
   titulos:
+    home: "Anúncios"
     cadastrese: "Cadastrar"
     login: "Login"
+    novo: "Novo Anúncio"
+    editar: "Editar Anúncio"

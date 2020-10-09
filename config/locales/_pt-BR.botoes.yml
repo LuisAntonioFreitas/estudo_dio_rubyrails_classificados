@@ -2,4 +2,5 @@ pt-BR:
   botoes:
     cadastrar: "Cadastrar"
     entrar: "Entrar"
-    novo: "Novo Anúncio"
+    novo: "Salvar"
+    editar: "Editar"

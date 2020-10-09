@@ -29,14 +29,21 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    flash[:notice] = t("mensagens.mensagem_sair"); # t(".session_finished") # flash.pt-BR.yml
-    @user = User.new
-    render :new
+    # flash[:notice] = t("mensagens.mensagem_sair"); # t(".session_finished") # flash.pt-BR.yml
+    # @user = User.new
+    # render :new
+    redirect_to root_path, notice: t("mensagens.mensagem_sair"); # t(".session_finished") # flash.pt-BR.yml
   end
 
   private
 
   def clean_session
+    txt_notice = flash[:notice] 
+    txt_alert = flash[:alert] 
+
     reset_session
+
+    flash[:notice] = txt_notice
+    flash[:alert] = txt_alert
   end
 end

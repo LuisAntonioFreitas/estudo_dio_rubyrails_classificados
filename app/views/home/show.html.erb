@@ -1,4 +1,17 @@
-<h1>Essa é minha HOME</h1>
+<h1><%= t("titulos.home") %></h1>
+
+<div>
+  <ul>
+    <% @ads.each do |ad| %>
+      <li>
+        <p><%= link_to t("botoes.editar"), edit_ad_path(ad) %></p>
+        <p><strong><%= ad.title %></strong></p>
+        <p><%= ad.description %></p>
+        <p><%= ad.price %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <p>
   Aqui vai meu conteúdo!
@@ -10,6 +23,6 @@
   <%= session[:user_id] %>
   </p>
   <% if user_signed_in? %>
-    <%= "XXXX #{@current_user.name} XXXX" %> 
+    <%= "XXXX #{current_user.name} XXXX" %> 
   <% end %>
 </p>
